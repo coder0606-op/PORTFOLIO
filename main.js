@@ -1,5 +1,86 @@
 // ==============================
-// Typing Effect for Hero Section
+// Custom Cursor Logic
+// ==============================
+const cursorDot = document.querySelector('.cursor-dot');
+const cursorOutline = document.querySelector('.cursor-outline');
+
+window.addEventListener('mousemove', (e) => {
+  const posX = e.clientX;
+  const posY = e.clientY;
+
+  cursorDot.style.left = `${posX}px`;
+  cursorDot.style.top = `${posY}px`;
+
+  // Slight delay for the outline for a fluid effect
+  cursorOutline.animate({
+    left: `${posX}px`,
+    top: `${posY}px`
+  }, { duration: 500, fill: "forwards" });
+});
+
+// Add hover effect to interactive elements
+document.querySelectorAll('a, button, .glass-card').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    document.body.classList.add('cursor-hover');
+  });
+  el.addEventListener('mouseleave', () => {
+    document.body.classList.remove('cursor-hover');
+  });
+});
+
+// ==============================
+// Background Particles
+// ==============================
+const particlesContainer = document.getElementById('particles-container');
+const particleCount = 40;
+
+for (let i = 0; i < particleCount; i++) {
+  const particle = document.createElement('div');
+  particle.classList.add('particle');
+  
+  // Randomize size, position, and animation delay
+  const size = Math.random() * 5 + 2;
+  const posX = Math.random() * 100;
+  const delay = Math.random() * 20;
+  const duration = Math.random() * 10 + 15;
+  
+  particle.style.width = `${size}px`;
+  particle.style.height = `${size}px`;
+  particle.style.left = `${posX}vw`;
+  particle.style.animationDelay = `${delay}s`;
+  particle.style.animationDuration = `${duration}s`;
+  
+  particlesContainer.appendChild(particle);
+}
+
+// ==============================
+// 3D Tilt Effect for Glass Cards
+// ==============================
+const tiltCards = document.querySelectorAll('.tilt-card');
+
+tiltCards.forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    // Calculate rotation based on mouse position relative to center
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    const rotateX = ((y - centerY) / centerY) * -10; // Max rotation 10deg
+    const rotateY = ((x - centerX) / centerX) * 10;
+    
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+  });
+  
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+  });
+});
+
+// ==============================
+// Typing Effect
 // ==============================
 const phrases = ["Full-Stack Applications.", "Intelligent AI Platforms.", "Scalable REST APIs.", "Interactive Web Experiences."];
 const typewriterElement = document.getElementById('typewriter');
@@ -14,16 +95,16 @@ function typeWriter() {
   if (isDeleting) {
     typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
     charIndex--;
-    typingSpeed = 50;
+    typingSpeed = 40;
   } else {
     typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
     charIndex++;
-    typingSpeed = 100;
+    typingSpeed = 80;
   }
 
   if (!isDeleting && charIndex === currentPhrase.length) {
     isDeleting = true;
-    typingSpeed = 2000;
+    typingSpeed = 2500;
   } else if (isDeleting && charIndex === 0) {
     isDeleting = false;
     phraseIndex = (phraseIndex + 1) % phrases.length;
@@ -34,7 +115,7 @@ function typeWriter() {
 }
 
 // ==============================
-// Scroll Reveal (all variants)
+// Scroll Reveal Observers
 // ==============================
 const revealSelectors = '.reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale, .stagger-children, .section-divider';
 const revealElements = document.querySelectorAll(revealSelectors);
@@ -75,14 +156,14 @@ timelines.forEach((tl) => timelineObserver.observe(tl));
 // ==============================
 function animateCounter(el, target) {
   const suffix = '+';
-  const duration = 1800; // ms
+  const duration = 2000;
   const startTime = performance.now();
 
   function step(now) {
     const elapsed = now - startTime;
     const progress = Math.min(elapsed / duration, 1);
-    // Ease-out cubic
-    const eased = 1 - Math.pow(1 - progress, 3);
+    // easeOutExpo
+    const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
     const current = Math.round(eased * target);
     el.textContent = current + suffix;
     if (progress < 1) {
@@ -122,22 +203,6 @@ window.addEventListener('scroll', () => {
     nav.classList.remove('scrolled');
   }
 }, { passive: true });
-
-// ==============================
-// Smooth Scroll for Nav Links
-// ==============================
-document.querySelectorAll('.nav-links a, .hero-cta a').forEach((anchor) => {
-  anchor.addEventListener('click', (e) => {
-    const href = anchor.getAttribute('href');
-    if (href && href.startsWith('#')) {
-      e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-  });
-});
 
 // ==============================
 // Init

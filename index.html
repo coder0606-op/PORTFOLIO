@@ -6,10 +6,17 @@
     <title>Ayush Kumar Sharma | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Dynamic Background -->
+    <div class="particles" id="particles-container"></div>
+
     <!-- Navbar -->
     <nav class="glass-nav">
       <div class="nav-content">
@@ -31,13 +38,19 @@
       <div class="blob blob-2"></div>
       <div class="hero-content reveal">
         <p class="greeting">Hi, I am</p>
-        <h1 class="name">Ayush Kumar <span class="highlight">Sharma</span></h1>
-        <h2 class="role">I build <span class="typewriter" id="typewriter"></span><span class="cursor">|</span></h2>
-        <p class="summary-text">Computer Science graduate and MERN stack developer crafting scalable, user-focused products.</p>
+        <h1 class="name">Ayush Kumar <span class="gradient-text">Sharma</span></h1>
+        <h2 class="role">I build <span class="typewriter gradient-text-alt" id="typewriter"></span><span class="type-cursor">|</span></h2>
+        <p class="summary-text">Computer Science graduate and MERN stack developer crafting scalable, intelligent, and user-focused digital experiences.</p>
         <div class="hero-cta">
-          <a href="#projects" class="btn primary-btn">View My Work</a>
+          <a href="#projects" class="btn primary-btn glow-btn">View My Work</a>
           <a href="#contact" class="btn secondary-btn">Contact Me</a>
         </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <p>Scroll Down</p>
       </div>
     </header>
 
@@ -47,23 +60,23 @@
     <!-- About Section -->
     <section class="about section" id="about">
       <div class="container reveal-left">
-        <h2 class="section-title">About <span class="highlight">Me</span></h2>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
         <div class="about-grid">
-          <div class="about-text">
+          <div class="about-text glass-card tilt-card">
             <p>I am a passionate software developer with hands-on experience building and deploying robust full-stack production applications. I specialize in the MERN stack and have a strong foundation in problem-solving.</p>
             <p>I love integrating modern tools like Generative AI APIs into my projects to build intelligent and cutting-edge solutions.</p>
             <div class="stats stagger-children">
               <div class="stat-item">
-                <h3 data-count="3">0</h3>
+                <h3 data-count="3" class="gradient-text">0</h3>
                 <p>Production Apps</p>
               </div>
               <div class="stat-item">
-                <h3 data-count="1800">0</h3>
+                <h3 data-count="1800" class="gradient-text">0</h3>
                 <p>LeetCode Rating</p>
               </div>
               <div class="stat-item">
-                <h3 data-count="1400">0</h3>
-                <p>Codeforces (Specialist)</p>
+                <h3 data-count="1400" class="gradient-text">0</h3>
+                <p>Codeforces</p>
               </div>
             </div>
           </div>
@@ -77,27 +90,27 @@
     <!-- Skills Section -->
     <section class="skills section" id="skills">
       <div class="container reveal-right">
-        <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
+        <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
         <div class="skills-grid stagger-children">
-          <div class="skill-category glass-card">
+          <div class="skill-category glass-card tilt-card">
             <h3>Languages</h3>
             <div class="skill-tags">
               <span>JavaScript</span><span>Java</span>
             </div>
           </div>
-          <div class="skill-category glass-card">
+          <div class="skill-category glass-card tilt-card">
             <h3>Frontend & Backend</h3>
             <div class="skill-tags">
               <span>React.js</span><span>Next.js</span><span>Node.js</span><span>Express.js</span><span>REST APIs</span>
             </div>
           </div>
-          <div class="skill-category glass-card">
+          <div class="skill-category glass-card tilt-card">
             <h3>Databases & Caching</h3>
             <div class="skill-tags">
               <span>MongoDB</span><span>MySQL</span><span>Oracle</span><span>Redis</span>
             </div>
           </div>
-          <div class="skill-category glass-card">
+          <div class="skill-category glass-card tilt-card">
             <h3>Cloud, DevOps & Tools</h3>
             <div class="skill-tags">
               <span>Docker</span><span>Firebase</span><span>Git</span><span>GitHub</span><span>GenAI APIs</span><span>Postman</span><span>Linux</span>
@@ -113,11 +126,11 @@
     <!-- Projects Section -->
     <section class="projects section" id="projects">
       <div class="container reveal">
-        <h2 class="section-title">Personal <span class="highlight">Projects</span></h2>
+        <h2 class="section-title">Personal <span class="gradient-text">Projects</span></h2>
         <div class="projects-grid stagger-children">
           
           <!-- Gen-Ques -->
-          <div class="project-card glass-card">
+          <div class="project-card glass-card tilt-card">
             <div class="project-content">
               <h3>Gen-Ques</h3>
               <p class="tech-stack">React.js, Node.js, MongoDB, Generative AI API</p>
@@ -130,7 +143,7 @@
           </div>
 
           <!-- TrendHive -->
-          <div class="project-card glass-card">
+          <div class="project-card glass-card tilt-card">
             <div class="project-content">
               <h3>TrendHive</h3>
               <p class="tech-stack">React.js, Node.js, Express.js, MongoDB, Cloudinary</p>
@@ -143,7 +156,7 @@
           </div>
 
           <!-- MediSync -->
-          <div class="project-card glass-card">
+          <div class="project-card glass-card tilt-card">
             <div class="project-content">
               <h3>MediSync</h3>
               <p class="tech-stack">React.js, Node.js, Express.js, MongoDB</p>
@@ -164,11 +177,11 @@
     <!-- Client Work Section -->
     <section class="projects section" id="client-work">
       <div class="container reveal">
-        <h2 class="section-title">Freelance & Client <span class="highlight">Work</span></h2>
+        <h2 class="section-title">Freelance & Client <span class="gradient-text">Work</span></h2>
         <div class="projects-grid stagger-children">
 
           <!-- Air Dream -->
-          <div class="project-card glass-card">
+          <div class="project-card glass-card tilt-card">
             <div class="project-content">
               <h3>Air Dream Travel</h3>
               <p class="tech-stack">React.js, Express.js, MongoDB</p>
@@ -180,7 +193,7 @@
           </div>
           
           <!-- GSIR -->
-          <div class="project-card glass-card">
+          <div class="project-card glass-card tilt-card">
             <div class="project-content">
               <h3>GSIR Conference</h3>
               <p class="tech-stack">React.js, Vite, Tailwind, Framer Motion</p>
@@ -203,28 +216,39 @@
       <div class="container reveal">
         <div class="achievements-edu-grid">
           <div class="reveal-left">
-            <h2 class="section-title">Achievements</h2>
+            <h2 class="section-title">Achievements <span class="gradient-text-alt">& Hackathons</span></h2>
             <ul class="timeline">
               <li>
                 <div class="timeline-dot"></div>
+                <h4>Runner-Up, Navonmesh Hackathon 2025</h4>
+                <p>Developed Gen-Ques, an AI-powered paper generator during the Binary Battle.</p>
+              </li>
+              <li>
+                <div class="timeline-dot"></div>
                 <h4>Runner-Up, Savishkar MP 2025</h4>
-                <p>Built "Kisan AI", an intelligent agricultural assistance solution.</p>
+                <p>Built "Kisan AI", an intelligent agricultural assistance solution in the Project Idea Competition.</p>
+              </li>
+               <li>
+                <div class="timeline-dot"></div>
+                <h4>Competitive Programming Elite</h4>
+                <p>1800+ on LeetCode (300+ problems solved). Specialist (1400+) on Codeforces.</p>
               </li>
               <li>
                 <div class="timeline-dot"></div>
-                <h4>Runner-Up, Navonmesh 2025</h4>
-                <p>Developed Gen-Ques, an AI-powered paper generator.</p>
-              </li>
-              <li>
-                <div class="timeline-dot"></div>
-                <h4>Competitive Programming</h4>
-                <p>1800+ on LeetCode (300+ problems). Specialist (1400+) on Codeforces.</p>
-              </li>
-              <li>
-                <div class="timeline-dot"></div>
-                <h4>NPTEL Certification</h4>
+                <h4>NPTEL Certification (IIT Kharagpur)</h4>
                 <p>Database Management Systems (SQL, transaction management).</p>
               </li>
+              <li>
+                <div class="timeline-dot"></div>
+                <h4>Adobe India Hackathon (Round 2)</h4>
+                <p>Advanced to the Build and Connect Round as Team Genovators after clearing Round 1 Coding + MCQ.</p>
+              </li>
+              <li>
+                <div class="timeline-dot"></div>
+                <h4>MUJ HackX 2.0 (Round 2)</h4>
+                <p>Advanced to Round 2 as Team Spycoders in the Manipal University Jaipur hackathon.</p>
+              </li>
+             
             </ul>
           </div>
           <div class="reveal-right">
@@ -257,7 +281,7 @@
     <!-- Contact Section -->
     <section class="contact section" id="contact">
       <div class="container reveal-scale text-center">
-        <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
         <p class="contact-text">Currently seeking a Software Development Engineer / Full-Stack Developer role. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
         <a href="mailto:iamayush615@gmail.com" class="btn primary-btn glow-btn">Say Hello</a>
       </div>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayush Kumar Sharma | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="glass-nav">
+      <div class="nav-content">
+        <a href="#" class="logo">Ayush.dev</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#client-work">Client Work</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+      <div class="blob"></div>
+      <div class="blob blob-2"></div>
+      <div class="hero-content reveal">
+        <p class="greeting">Hi, I am</p>
+        <h1 class="name">Ayush Kumar <span class="highlight">Sharma</span></h1>
+        <h2 class="role">I build <span class="typewriter" id="typewriter"></span><span class="cursor">|</span></h2>
+        <p class="summary-text">Computer Science graduate and MERN stack developer crafting scalable, user-focused products.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn primary-btn">View My Work</a>
+          <a href="#contact" class="btn secondary-btn">Contact Me</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Divider -->
+    <div class="section-divider reveal-scale"><div class="divider-line"></div></div>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+      <div class="container reveal-left">
+        <h2 class="section-title">About <span class="highlight">Me</span></h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I am a passionate software developer with hands-on experience building and deploying robust full-stack production applications. I specialize in the MERN stack and have a strong foundation in problem-solving.</p>
+            <p>I love integrating modern tools like Generative AI APIs into my projects to build intelligent and cutting-edge solutions.</p>
+            <div class="stats stagger-children">
+              <div class="stat-item">
+                <h3 data-count="3">0</h3>
+                <p>Production Apps</p>
+              </div>
+              <div class="stat-item">
+                <h3 data-count="1800">0</h3>
+                <p>LeetCode Rating</p>
+              </div>
+              <div class="stat-item">
+                <h3 data-count="1400">0</h3>
+                <p>Codeforces (Specialist)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider reveal-scale"><div class="divider-line"></div></div>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+      <div class="container reveal-right">
+        <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
+        <div class="skills-grid stagger-children">
+          <div class="skill-category glass-card">
+            <h3>Languages</h3>
+            <div class="skill-tags">
+              <span>JavaScript</span><span>Java</span>
+            </div>
+          </div>
+          <div class="skill-category glass-card">
+            <h3>Frontend & Backend</h3>
+            <div class="skill-tags">
+              <span>React.js</span><span>Next.js</span><span>Node.js</span><span>Express.js</span><span>REST APIs</span>
+            </div>
+          </div>
+          <div class="skill-category glass-card">
+            <h3>Databases & Caching</h3>
+            <div class="skill-tags">
+              <span>MongoDB</span><span>MySQL</span><span>Oracle</span><span>Redis</span>
+            </div>
+          </div>
+          <div class="skill-category glass-card">
+            <h3>Cloud, DevOps & Tools</h3>
+            <div class="skill-tags">
+              <span>Docker</span><span>Firebase</span><span>Git</span><span>GitHub</span><span>GenAI APIs</span><span>Postman</span><span>Linux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider reveal-scale"><div class="divider-line"></div></div>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+      <div class="container reveal">
+        <h2 class="section-title">Personal <span class="highlight">Projects</span></h2>
+        <div class="projects-grid stagger-children">
+          
+          <!-- Gen-Ques -->
+          <div class="project-card glass-card">
+            <div class="project-content">
+              <h3>Gen-Ques</h3>
+              <p class="tech-stack">React.js, Node.js, MongoDB, Generative AI API</p>
+              <p class="desc">AI-powered exam paper generation platform processing PDFs, videos, and text. Won Runner-Up at Navonmesh Binary Battle Hackathon 2025.</p>
+              <div class="project-links">
+                <a href="https://gen-ques.vercel.app/" target="_blank" class="project-link">Live</a>
+                <a href="https://github.com/coder0606-op/Gen-Ques" target="_blank" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- TrendHive -->
+          <div class="project-card glass-card">
+            <div class="project-content">
+              <h3>TrendHive</h3>
+              <p class="tech-stack">React.js, Node.js, Express.js, MongoDB, Cloudinary</p>
+              <p class="desc">Full-stack e-commerce platform with JWT authentication, RBAC, and optimized REST APIs for robust shopping workflows.</p>
+              <div class="project-links">
+                <a href="https://trend-hive-gray.vercel.app/" target="_blank" class="project-link">Live</a>
+                <a href="https://github.com/coder0606-op/TrendHive" target="_blank" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- MediSync -->
+          <div class="project-card glass-card">
+            <div class="project-content">
+              <h3>MediSync</h3>
+              <p class="tech-stack">React.js, Node.js, Express.js, MongoDB</p>
+              <p class="desc">Doctor appointment system with automated scheduling, role-based dashboards, and real-time conflict-free booking.</p>
+              <div class="project-links">
+                <a href="https://medisync123.netlify.app/" target="_blank" class="project-link">Live</a>
+                <a href="https://github.com/coder0606-op/MediSync.Backend" target="_blank" class="project-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider reveal-scale"><div class="divider-line"></div></div>
+
+    <!-- Client Work Section -->
+    <section class="projects section" id="client-work">
+      <div class="container reveal">
+        <h2 class="section-title">Freelance & Client <span class="highlight">Work</span></h2>
+        <div class="projects-grid stagger-children">
+
+          <!-- Air Dream -->
+          <div class="project-card glass-card">
+            <div class="project-content">
+              <h3>Air Dream Travel</h3>
+              <p class="tech-stack">React.js, Express.js, MongoDB</p>
+              <p class="desc">Client travel agency website covering tours and visas. Includes a JWT-authenticated admin dashboard for dynamic content management.</p>
+              <div class="project-links">
+                <a href="https://airdreamtraveltourism.com/" target="_blank" class="project-link">Live</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- GSIR -->
+          <div class="project-card glass-card">
+            <div class="project-content">
+              <h3>GSIR Conference</h3>
+              <p class="tech-stack">React.js, Vite, Tailwind, Framer Motion</p>
+              <p class="desc">Responsive multi-page website for an academic conference with animated UI elements and component-driven architecture.</p>
+              <div class="project-links">
+                <a href="https://www.gsir.in/" target="_blank" class="project-link">Live</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider reveal-scale"><div class="divider-line"></div></div>
+
+    <!-- Achievements & Education Section -->
+    <section class="achievements section" id="achievements">
+      <div class="container reveal">
+        <div class="achievements-edu-grid">
+          <div class="reveal-left">
+            <h2 class="section-title">Achievements</h2>
+            <ul class="timeline">
+              <li>
+                <div class="timeline-dot"></div>
+                <h4>Runner-Up, Savishkar MP 2025</h4>
+                <p>Built "Kisan AI", an intelligent agricultural assistance solution.</p>
+              </li>
+              <li>
+                <div class="timeline-dot"></div>
+                <h4>Runner-Up, Navonmesh 2025</h4>
+                <p>Developed Gen-Ques, an AI-powered paper generator.</p>
+              </li>
+              <li>
+                <div class="timeline-dot"></div>
+                <h4>Competitive Programming</h4>
+                <p>1800+ on LeetCode (300+ problems). Specialist (1400+) on Codeforces.</p>
+              </li>
+              <li>
+                <div class="timeline-dot"></div>
+                <h4>NPTEL Certification</h4>
+                <p>Database Management Systems (SQL, transaction management).</p>
+              </li>
+            </ul>
+          </div>
+          <div class="reveal-right">
+            <h2 class="section-title">Education</h2>
+            <ul class="timeline">
+              <li>
+                <div class="timeline-dot"></div>
+                <h4>B.Tech in Computer Science</h4>
+                <p>IES College of Technology, Bhopal | CGPA: 7.64 <br> Aug 2022 - Jun 2026</p>
+              </li>
+              <li>
+                <div class="timeline-dot"></div>
+                <h4>Senior Secondary (PCM)</h4>
+                <p>Lions Public School, Dhanbad</p>
+              </li>
+              <li>
+                <div class="timeline-dot"></div>
+                <h4>Secondary Education</h4>
+                <p>De Nobili School, Dhanbad</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider reveal-scale"><div class="divider-line"></div></div>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+      <div class="container reveal-scale text-center">
+        <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+        <p class="contact-text">Currently seeking a Software Development Engineer / Full-Stack Developer role. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+        <a href="mailto:iamayush615@gmail.com" class="btn primary-btn glow-btn">Say Hello</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ayush-kumar-sharma-631496243/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/coder0606-op" target="_blank">GitHub</a>
+        <a href="https://leetcode.com/u/codefreak06/" target="_blank">LeetCode</a>
+        <a href="https://codeforces.com/profile/NullOverflow" target="_blank">Codeforces</a>
+      </div>
+      <p>+91 8409105533 | iamayush615@gmail.com</p>
+      <p class="copyright">Designed & Built with ♥</p>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
